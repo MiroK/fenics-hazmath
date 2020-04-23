@@ -31,11 +31,3 @@ RUN git clone https://mirok@bitbucket.org/fenics-apps/cbc.block.git && \
     cd ..
 
 USER root
-# Release
-# Might need to do docker login 
-# docker build --no-cache -t name .
-# docker tag name:latest dockerhub...
-# docker push mirok/neuronmi
-
-# To user
-# docker run -it -v $(pwd):/home/fenics/shared hazmath_dev
