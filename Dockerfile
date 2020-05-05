@@ -18,8 +18,7 @@ RUN git clone https://github.com/nschloe/quadpy.git && \
 RUN git clone https://github.com/MiroK/fenics_ii.git && \
     cd fenics_ii && \
     git fetch --all  && \
-    git checkout f2019.1-py3.6       && \
-    git checkout -b dcfaa36aef7eb18969e96213e2e758ecb9d6390d && \
+    git checkout hsfrac-minimal       && \
     cd ..
     
 ENV PYTHONPATH="/home/fenics/fenics_ii/":"$PYTHONPATH"
@@ -27,6 +26,11 @@ ENV PYTHONPATH="/home/fenics/fenics_ii/":"$PYTHONPATH"
 # cbc.block
 RUN git clone https://mirok@bitbucket.org/fenics-apps/cbc.block.git && \
     cd cbc.block && \
+    python3 setup.py install --user && \
+    cd ..
+
+RUN git clone https://github.com/MiroK/ulfy.git && \
+    cd ulfy && \
     python3 setup.py install --user && \
     cd ..
 
