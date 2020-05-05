@@ -24,7 +24,7 @@ RUN git clone https://github.com/MiroK/fenics_ii.git && \
 ENV PYTHONPATH="/home/fenics/fenics_ii/":"$PYTHONPATH"
 
 # cbc.block
-RUN git clone https://mirok@bitbucket.org/fenics-apps/cbc.block.git && \
+RUN git clone https://mirok-w-simula@bitbucket.org/mirok-w-simula/cbc.block.git && \
     cd cbc.block && \
     python3 setup.py install --user && \
     cd ..
